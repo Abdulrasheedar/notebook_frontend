@@ -27,6 +27,7 @@ const NoteState = (props) => {
     //To do api call
     //Api call
         const url = `${host}/api/notes/addNote`;
+        console.log("token",localStorage.getItem("token"));
         const headers = new Headers();
         headers.set("Authorization", localStorage.getItem("token"));
         headers.set("Content-Type", "application/json");  // Set the content type to JSON
