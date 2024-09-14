@@ -12,7 +12,7 @@ const NoteState = (props) => {
     //Api call
         const url = `${host}/api/notes/fetchAllNotes`;
         const headers = new Headers();
-        headers.set("Authorization", "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYmR1bEBnbWFpbC5jb20iLCJleHAiOjE3MjYyNzMzMDAsImlhdCI6MTcyNjIzNzMwMH0.rdZb_q_GyIlFxqyyr4FMo_5SZA-UIsvBndSrbEDAduc");
+        headers.set("Authorization", localStorage.getItem("token"));
       
         let data = await fetch(url, {
           method: "GET",
